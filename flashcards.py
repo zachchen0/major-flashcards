@@ -282,11 +282,9 @@ class FlashcardApp(QMainWindow):
             self.word_label.show()
 
             img_path = self._find_image(num)
-            if img_path:
-                px = QPixmap(str(img_path)).scaledToHeight(
-                    IMAGE_HEIGHT, Qt.SmoothTransformation
-                )
-                self.image_label.setPixmap(px)
+            px = QPixmap(str(img_path)) if img_path else QPixmap()
+            if not px.isNull():
+                self.image_label.setPixmap(px.scaledToHeight(IMAGE_HEIGHT, Qt.SmoothTransformation))
                 self.image_label.show()
             else:
                 self.image_label.hide()
@@ -346,11 +344,8 @@ class FlashcardApp(QMainWindow):
 
     @staticmethod
     def _find_image(num: str) -> Path | None:
-        for ext in ("png", "jpg", "jpeg", "webp"):
-            p = IMAGES_DIR / f"{num}.{ext}"
-            if p.exists():
-                return p
-        return None
+        p = IMAGES_DIR / f"{num}.webp"
+        return p if p.exists() else None
 
     def _show_major(self):
         if self._major_dialog is None:
