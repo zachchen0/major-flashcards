@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp": "2026-04-20T00:58:09.446852",
+    "mode": "order",
+    "inverse": false,
+    "correct": 65,
+    "wrong": 35,
+    "elapsed": 1645
+  }
+]
