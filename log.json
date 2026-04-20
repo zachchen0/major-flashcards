@@ -14,5 +14,13 @@
     "correct": 68,
     "wrong": 32,
     "elapsed": 1261
+  },
+  {
+    "timestamp": "2026-04-20T02:13:15.844601",
+    "mode": "order",
+    "inverse": false,
+    "correct": 80,
+    "wrong": 20,
+    "elapsed": 1610
   }
 ]
