@@ -25,7 +25,7 @@ WORDS = {
     "45": "Rell",  "46": "Raj",    "47": "rake",   "48": "Rafa",   "49": "rope",
     "50": "Lisa",  "51": "lid",   "52": "lion",   "53": "lime",   "54": "Larry",
     "55": "Lalo",  "56": "leech",  "57": "Luke",   "58": "leaf",   "59": "Lip",
-    "60": "Jessie","61": "jet",    "62": "Jennie",   "63": "gem",    "64": "jar",
+    "60": "Jessie","61": "jet",    "62": "Jennie",   "63": "Jim",    "64": "jar",
     "65": "jello", "66": "JJ",     "67": "Jackie", "68": "Jeff",   "69": "Jeep",
     "70": "case",  "71": "Cade",   "72": "Ken",    "73": "Kim",    "74": "choir",
     "75": "kale",  "76": "cage",   "77": "Keke",   "78": "coffee",   "79": "cab",
