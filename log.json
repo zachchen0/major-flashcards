@@ -46,5 +46,13 @@
     "correct": 93,
     "wrong": 7,
     "elapsed": 889
+  },
+  {
+    "timestamp": "2026-04-20T04:24:36.494885",
+    "mode": "order",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 818
   }
 ]
