@@ -54,5 +54,37 @@
     "correct": 100,
     "wrong": 0,
     "elapsed": 818
+  },
+  {
+    "timestamp": "2026-04-20T14:35:49.616619",
+    "mode": "order",
+    "inverse": false,
+    "correct": 87,
+    "wrong": 13,
+    "elapsed": 1297
+  },
+  {
+    "timestamp": "2026-04-20T15:05:45.806259",
+    "mode": "order",
+    "inverse": false,
+    "correct": 77,
+    "wrong": 23,
+    "elapsed": 942
+  },
+  {
+    "timestamp": "2026-04-20T15:20:34.949308",
+    "mode": "order",
+    "inverse": false,
+    "correct": 89,
+    "wrong": 11,
+    "elapsed": 426
+  },
+  {
+    "timestamp": "2026-04-20T15:30:32.582541",
+    "mode": "reverse",
+    "inverse": false,
+    "correct": 85,
+    "wrong": 15,
+    "elapsed": 581
   }
 ]
