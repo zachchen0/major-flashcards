@@ -14,7 +14,7 @@ from PySide6.QtGui import QPixmap, QFont, QShortcut, QKeySequence, QPainter, QCo
 
 WORDS = {
     "00": "seesaw","01": "Sid",    "02": "sun",    "03": "Sam",    "04": "Sarah",
-    "05": "soil",  "06": "sash",   "07": "sock",   "08": "safe",   "09": "sap",
+    "05": "soil",  "06": "sage",   "07": "sock",   "08": "safe",   "09": "sap",
     "10": "dice",  "11": "dodo",   "12": "Donna",   "13": "Dom",    "14": "door",
     "15": "doll",  "16": "Deji",   "17": "duck",   "18": "Doof",   "19": "dip",
     "20": "nose",  "21": "net",    "22": "Nunu",   "23": "Nemo",   "24": "nori",
@@ -32,7 +32,7 @@ WORDS = {
     "80": "fez",   "81": "foot",   "82": "fan",    "83": "foam",   "84": "fire",
     "85": "file",  "86": "fudge",  "87": "fake",    "88": "fufu",   "89": "fob",
     "90": "bus",   "91": "bat",    "92": "bun",    "93": "bam",   "94": "bear",
-    "95": "bell",  "96": "bush",   "97": "bike",   "98": "beef",   "99": "baby",
+    "95": "ball",  "96": "badge",   "97": "bike",   "98": "beef",   "99": "baby",
 }
 
 MAJOR_SYSTEM = [

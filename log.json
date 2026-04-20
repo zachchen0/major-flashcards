@@ -30,5 +30,21 @@
     "correct": 94,
     "wrong": 6,
     "elapsed": 1030
+  },
+  {
+    "timestamp": "2026-04-20T03:55:14.406461",
+    "mode": "order",
+    "inverse": false,
+    "correct": 94,
+    "wrong": 6,
+    "elapsed": 874
+  },
+  {
+    "timestamp": "2026-04-20T04:10:23.310283",
+    "mode": "order",
+    "inverse": false,
+    "correct": 93,
+    "wrong": 7,
+    "elapsed": 889
   }
 ]
