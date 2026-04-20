@@ -8,12 +8,12 @@ from PySide6.QtWidgets import (
     QPushButton, QLabel, QFrame, QSizePolicy, QDialog,
 )
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QPixmap, QFont
+from PySide6.QtGui import QPixmap, QFont, QShortcut, QKeySequence
 
 WORDS = {
     "00": "Zeus",  "01": "Sid",    "02": "sun",    "03": "Sam",    "04": "Sarah",
     "05": "soil",  "06": "sash",   "07": "sock",   "08": "safe",   "09": "sap",
-    "10": "dice",  "11": "Toad",   "12": "dune",   "13": "dam",    "14": "tire",
+    "10": "dice",  "11": "Titi",   "12": "dune",   "13": "dam",    "14": "tire",
     "15": "tail",  "16": "dish",   "17": "tick",   "18": "dove",   "19": "tape",
     "20": "nose",  "21": "net",    "22": "naan",   "23": "gnome",  "24": "Nero",
     "25": "nail",  "26": "Notch",  "27": "neck",   "28": "knife",  "29": "knob",
@@ -108,9 +108,11 @@ class FlashcardApp(QMainWindow):
         self.is_flipped = False
         self.session_correct = 0
         self.session_wrong = 0
+        self.session_marks: dict[int, str] = {}
         self._major_dialog: MajorSystemDialog | None = None
 
         self._build_ui()
+        self._setup_shortcuts()
         self._build_deck()
         self._show_card()
 
@@ -218,6 +220,7 @@ class FlashcardApp(QMainWindow):
         self.btn_wrong.setChecked(mode == MODE_WRONG)
         self.session_correct = 0
         self.session_wrong = 0
+        self.session_marks = {}
         self._build_deck()
         self._show_card()
 
@@ -232,6 +235,7 @@ class FlashcardApp(QMainWindow):
             self.deck = sorted(keys, key=lambda k: self.stats[k]["wrong"], reverse=True)
         self.current_index = 0
         self.is_flipped = False
+        self.session_marks = {}
 
     # ── Card display ─────────────────────────────────────────────────────────
 
@@ -243,9 +247,16 @@ class FlashcardApp(QMainWindow):
         num = self.deck[self.current_index]
         self.is_flipped = False
 
-        self.card_frame.setStyleSheet(
-            "QFrame { background: white; border: 2px solid #ccc; border-radius: 16px; }"
-        )
+        mark = self.session_marks.get(self.current_index)
+        if mark == "correct":
+            style = "QFrame { background: #d4edda; border: 2px solid #28a745; border-radius: 16px; }"
+        elif mark == "wrong":
+            style = "QFrame { background: #f8d7da; border: 2px solid #dc3545; border-radius: 16px; }"
+        else:
+            style = "QFrame { background: white; border: 2px solid #ccc; border-radius: 16px; }"
+        self.card_frame.setStyleSheet(style)
+
+        self.number_label.setFont(QFont("Arial", 90, QFont.Bold))
         self.number_label.setText(num)
         self.number_label.show()
         self.word_label.hide()
@@ -253,9 +264,11 @@ class FlashcardApp(QMainWindow):
 
         self.progress_label.setText(f"Card {self.current_index + 1} / {len(self.deck)}")
         self._update_session_label()
-        self.hint_label.setText("Space = flip     |     Enter = Got it ✓     |     Delete = Wrong ✗")
+        self.hint_label.setText("← → navigate     Space = flip     Enter = ✓     Delete = ✗")
 
     def _flip_card(self):
+        if self.current_index >= len(self.deck):
+            return
         num = self.deck[self.current_index]
         if self.is_flipped:
             self.is_flipped = False
@@ -279,24 +292,33 @@ class FlashcardApp(QMainWindow):
                 self.image_label.hide()
 
     def _mark_correct(self):
-        num = self.deck[self.current_index]
-        self.stats[num]["correct"] += 1
-        self.session_correct += 1
-        save_stats(self.stats)
-        self.card_frame.setStyleSheet(
-            "QFrame { background: #d4edda; border: 2px solid #28a745; border-radius: 16px; }"
-        )
-        self.current_index += 1
-        self._show_card()
+        self._record_mark("correct")
 
     def _mark_wrong(self):
-        num = self.deck[self.current_index]
-        self.stats[num]["wrong"] += 1
-        self.session_wrong += 1
-        save_stats(self.stats)
-        self.card_frame.setStyleSheet(
-            "QFrame { background: #f8d7da; border: 2px solid #dc3545; border-radius: 16px; }"
-        )
+        self._record_mark("wrong")
+
+    def _record_mark(self, result: str):
+        if self.current_index >= len(self.deck):
+            return
+        idx = self.current_index
+        num = self.deck[idx]
+        prev = self.session_marks.get(idx)
+
+        if prev != result:
+            if prev == "correct":
+                self.stats[num]["correct"] = max(0, self.stats[num]["correct"] - 1)
+                self.session_correct -= 1
+            elif prev == "wrong":
+                self.stats[num]["wrong"] = max(0, self.stats[num]["wrong"] - 1)
+                self.session_wrong -= 1
+            self.stats[num][result] += 1
+            if result == "correct":
+                self.session_correct += 1
+            else:
+                self.session_wrong += 1
+            self.session_marks[idx] = result
+            save_stats(self.stats)
+
         self.current_index += 1
         self._show_card()
 
@@ -339,19 +361,30 @@ class FlashcardApp(QMainWindow):
 
     # ── Keyboard ─────────────────────────────────────────────────────────────
 
-    def keyPressEvent(self, event):
-        key = event.key()
-        if key == Qt.Key_Space:
-            if self.current_index < len(self.deck):
-                self._flip_card()
-        elif key in (Qt.Key_Return, Qt.Key_Enter):
-            if self.current_index < len(self.deck):
-                self._mark_correct()
-        elif key in (Qt.Key_Delete, Qt.Key_Backspace):
-            if self.current_index < len(self.deck):
-                self._mark_wrong()
-        else:
-            super().keyPressEvent(event)
+    def _nav_prev(self):
+        if self.current_index > 0:
+            self.current_index -= 1
+            self._show_card()
+
+    def _nav_next(self):
+        if self.current_index < len(self.deck):
+            self.current_index += 1
+            self._show_card()
+
+    def _setup_shortcuts(self):
+        for key, slot in [
+            (Qt.Key_Space,     self._flip_card),
+            (Qt.Key_Return,    self._mark_correct),
+            (Qt.Key_Enter,     self._mark_correct),
+            (Qt.Key_Delete,    self._mark_wrong),
+            (Qt.Key_Backspace, self._mark_wrong),
+            (Qt.Key_Left,      self._nav_prev),
+            (Qt.Key_Right,     self._nav_next),
+        ]:
+            sc = QShortcut(QKeySequence(key), self)
+            sc.setContext(Qt.ApplicationShortcut)
+            sc.activated.connect(slot)
+
 
 
 def main():
