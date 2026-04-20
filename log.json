@@ -22,5 +22,13 @@
     "correct": 80,
     "wrong": 20,
     "elapsed": 1610
+  },
+  {
+    "timestamp": "2026-04-20T03:22:07.069766",
+    "mode": "order",
+    "inverse": false,
+    "correct": 94,
+    "wrong": 6,
+    "elapsed": 1030
   }
 ]
