@@ -86,5 +86,61 @@
     "correct": 85,
     "wrong": 15,
     "elapsed": 581
+  },
+  {
+    "timestamp": "2026-04-20T15:46:04.019695",
+    "mode": "order",
+    "inverse": false,
+    "correct": 98,
+    "wrong": 2,
+    "elapsed": 323
+  },
+  {
+    "timestamp": "2026-04-20T15:58:27.853668",
+    "mode": "reverse",
+    "inverse": false,
+    "correct": 97,
+    "wrong": 3,
+    "elapsed": 364
+  },
+  {
+    "timestamp": "2026-04-20T16:07:01.564084",
+    "mode": "random",
+    "inverse": false,
+    "correct": 92,
+    "wrong": 8,
+    "elapsed": 498
+  },
+  {
+    "timestamp": "2026-04-20T16:15:17.513721",
+    "mode": "random",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 444
+  },
+  {
+    "timestamp": "2026-04-20T16:29:31.498925",
+    "mode": "random",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 400
+  },
+  {
+    "timestamp": "2026-04-20T16:33:00.314754",
+    "mode": "random",
+    "inverse": true,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 198
+  },
+  {
+    "timestamp": "2026-04-20T16:39:04.994707",
+    "mode": "random",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 334
   }
 ]
