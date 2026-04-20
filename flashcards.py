@@ -16,7 +16,7 @@ WORDS = {
     "00": "seesaw","01": "Sid",    "02": "sun",    "03": "Sam",    "04": "Sarah",
     "05": "soil",  "06": "sash",   "07": "sock",   "08": "safe",   "09": "sap",
     "10": "dice",  "11": "dodo",   "12": "dune",   "13": "dam",    "14": "door",
-    "15": "doll",  "16": "dish",   "17": "duck",   "18": "dove",   "19": "dip",
+    "15": "doll",  "16": "dish",   "17": "duck",   "18": "Doof",   "19": "dip",
     "20": "nose",  "21": "net",    "22": "Nunu",   "23": "Nemo",   "24": "nori",
     "25": "nail",  "26": "Notch",  "27": "nuke",   "28": "knife",  "29": "Nepo",
     "30": "moose", "31": "mud",    "32": "moon",   "33": "mummy",  "34": "Mario",

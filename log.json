@@ -6,5 +6,13 @@
     "correct": 65,
     "wrong": 35,
     "elapsed": 1645
+  },
+  {
+    "timestamp": "2026-04-20T01:31:00.925697",
+    "mode": "order",
+    "inverse": false,
+    "correct": 68,
+    "wrong": 32,
+    "elapsed": 1261
   }
 ]
