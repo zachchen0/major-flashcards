@@ -142,5 +142,13 @@
     "correct": 100,
     "wrong": 0,
     "elapsed": 334
+  },
+  {
+    "timestamp": "2026-04-20T17:45:14.846011",
+    "mode": "random",
+    "inverse": false,
+    "correct": 97,
+    "wrong": 3,
+    "elapsed": 665
   }
 ]
