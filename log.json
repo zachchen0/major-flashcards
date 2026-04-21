@@ -150,5 +150,13 @@
     "correct": 97,
     "wrong": 3,
     "elapsed": 665
+  },
+  {
+    "timestamp": "2026-04-20T18:05:04.499543",
+    "mode": "random",
+    "inverse": false,
+    "correct": 99,
+    "wrong": 1,
+    "elapsed": 406
   }
 ]
