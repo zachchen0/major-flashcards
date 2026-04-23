@@ -158,5 +158,77 @@
     "correct": 99,
     "wrong": 1,
     "elapsed": 406
+  },
+  {
+    "timestamp": "2026-04-20T18:13:54.809182",
+    "mode": "random",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 326
+  },
+  {
+    "timestamp": "2026-04-20T18:21:22.486643",
+    "mode": "random",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 338
+  },
+  {
+    "timestamp": "2026-04-20T18:29:46.793222",
+    "mode": "random",
+    "inverse": true,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 133
+  },
+  {
+    "timestamp": "2026-04-20T18:36:22.133167",
+    "mode": "random",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 378
+  },
+  {
+    "timestamp": "2026-04-20T18:40:53.060242",
+    "mode": "order",
+    "inverse": false,
+    "correct": 99,
+    "wrong": 1,
+    "elapsed": 262
+  },
+  {
+    "timestamp": "2026-04-20T18:44:22.483773",
+    "mode": "order",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 202
+  },
+  {
+    "timestamp": "2026-04-20T18:47:53.418025",
+    "mode": "order",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 197
+  },
+  {
+    "timestamp": "2026-04-20T18:50:50.222572",
+    "mode": "order",
+    "inverse": false,
+    "correct": 100,
+    "wrong": 0,
+    "elapsed": 168
+  },
+  {
+    "timestamp": "2026-04-20T18:55:57.369728",
+    "mode": "reverse",
+    "inverse": false,
+    "correct": 99,
+    "wrong": 1,
+    "elapsed": 290
   }
 ]
