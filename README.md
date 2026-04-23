@@ -4,7 +4,7 @@ A flashcard app for memorizing the [Major System](https://en.wikipedia.org/wiki/
 
 ## Features
 
-- **Six modes**: In Order, Reverse, Random, Most Wrong (by error rate), Slowest (by avg response time), Statistics, Log
+- **Seven modes**: In Order, Reverse, Random, Most Wrong (by error rate), Slowest (by avg response time), Statistics, Log
 - **Flip Cards**: Show the word first, recall the number
 - **Statistics**: Wrong % chart and avg response time chart per card
 - **Session log**: History of completed runs with score and time
@@ -63,7 +63,7 @@ This converts everything to `.webp` in-place and reports which of the 100 cards 
 | 55  | Lulu   | 56  | leech | 57  | Luke   | 58  | leaf   | 59  | Lip   |
 | 60  | Jessie | 61  | jet   | 62  | Jennie | 63  | Jim    | 64  | jar   |
 | 65  | jello  | 66  | JJ    | 67  | Jackie | 68  | Jeff   | 69  | Jeep  |
-| 70  | case   | 71  | Cade  | 72  | Ken    | 73  | Kim    | 74  | choir |
+| 70  | case   | 71  | cod   | 72  | Ken    | 73  | Kim    | 74  | choir |
 | 75  | kale   | 76  | cage  | 77  | Keke   | 78  | coffee | 79  | cab   |
 | 80  | fez    | 81  | foot  | 82  | fan    | 83  | foam   | 84  | fire  |
 | 85  | file   | 86  | fudge | 87  | fake   | 88  | fufu   | 89  | fob   |
