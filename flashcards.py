@@ -31,7 +31,7 @@ WORDS = {
     "70": "case",  "71": "cod",   "72": "Ken",    "73": "Kim",    "74": "choir",
     "75": "kale",  "76": "cage",   "77": "Keke",   "78": "coffee",   "79": "cab",
     "80": "fez",   "81": "foot",   "82": "fan",    "83": "foam",   "84": "fire",
-    "85": "foil",  "86": "fudge",  "87": "fake",    "88": "fufu",   "89": "fob",
+    "85": "file",  "86": "fudge",  "87": "fake",    "88": "fufu",   "89": "fob",
     "90": "bus",   "91": "bat",    "92": "bun",    "93": "bam",   "94": "bear",
     "95": "ball",  "96": "bush",   "97": "bike",   "98": "beef",   "99": "baby",
 }
