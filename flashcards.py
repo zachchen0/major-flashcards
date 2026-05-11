@@ -28,7 +28,7 @@ WORDS = {
     "55": "Lulu",  "56": "leash",  "57": "Luke",   "58": "leaf",   "59": "Lip",
     "60": "Jessie","61": "jet",    "62": "Jennie",   "63": "jam",    "64": "jar",
     "65": "jello", "66": "JJ",     "67": "Jackie", "68": "Jeff",   "69": "Jeep",
-    "70": "case",  "71": "cod",   "72": "Ken",    "73": "Kim",    "74": "choir",
+    "70": "case",  "71": "cod",   "72": "can",    "73": "cam",    "74": "choir",
     "75": "kale",  "76": "cage",   "77": "Keke",   "78": "coffee",   "79": "cab",
     "80": "fez",   "81": "foot",   "82": "fan",    "83": "foam",   "84": "fire",
     "85": "file",  "86": "fudge",  "87": "fake",    "88": "fufu",   "89": "fob",
