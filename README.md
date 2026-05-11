@@ -50,7 +50,7 @@ This converts everything to `.webp` in-place and reports which of the 100 cards 
 | #   | Word   | #   | Word  | #   | Word   | #   | Word   | #   | Word  |
 | --- | ------ | --- | ----- | --- | ------ | --- | ------ | --- | ----- |
 | 00  | seesaw | 01  | Sid   | 02  | sun    | 03  | Sam    | 04  | Sarah |
-| 05  | soil   | 06  | Sage  | 07  | sock   | 08  | safe   | 09  | sap   |
+| 05  | soil   | 06  | Sage  | 07  | sock   | 08  | safe   | 09  | soup  |
 | 10  | dice   | 11  | dodo  | 12  | Donna  | 13  | Dom    | 14  | door  |
 | 15  | doll   | 16  | Deji  | 17  | duck   | 18  | Doof   | 19  | dip   |
 | 20  | nose   | 21  | net   | 22  | Nunu   | 23  | Nemo   | 24  | nori  |
