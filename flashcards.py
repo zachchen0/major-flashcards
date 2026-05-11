@@ -22,7 +22,7 @@ WORDS = {
     "25": "nail",  "26": "Nacho",  "27": "nuke",   "28": "knife",  "29": "Nepo",
     "30": "moose", "31": "mud",    "32": "moon",   "33": "mummy",  "34": "Mario",
     "35": "mail",  "36": "Mochi",  "37": "Mike",   "38": "muff",   "39": "mop",
-    "40": "rose",  "41": "rod",    "42": "Ron",    "43": "Remy",   "44": "Rory",
+    "40": "rose",  "41": "rod",    "42": "Ron",    "43": "ram",   "44": "Rory",
     "45": "rail",  "46": "Raj",    "47": "rake",   "48": "Rafa",   "49": "rope",
     "50": "Lisa",  "51": "lid",   "52": "lion",   "53": "lime",   "54": "Larry",
     "55": "Lulu",  "56": "leash",  "57": "Luke",   "58": "leaf",   "59": "Lip",
