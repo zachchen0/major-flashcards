@@ -13,12 +13,15 @@ A flashcard app for memorizing the [Major System](https://en.wikipedia.org/wiki/
 ## Requirements
 
 - Python 3.10+
-- PySide6
+- pywebview (the UI runs in a native webview)
 - Pillow (for image conversion utility)
 
 ```
-pip install PySide6 Pillow
+pip install pywebview Pillow
 ```
+
+The interface lives in `web/` (HTML + JS, styled with Tailwind). Tailwind and
+the fonts are vendored under `web/vendor/`, so the app runs fully offline.
 
 ## Usage
 
